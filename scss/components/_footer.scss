@@ -1,0 +1,158 @@
+//FOOTER
+
+.footer {
+    background-color: $darkGrey;
+    &__container {
+      width: 950px;
+      margin: auto;
+      @include MediaQuery($md){
+        width: 100%;
+      }
+      &__top {
+        padding-top: 30px;
+        border-bottom: 1px solid $textDarkGrey;
+        @include MediaQuery($md){
+          display: none;
+        }
+      }
+      &__responsive-top{
+        padding-top: 30px;
+        border-bottom: 1px solid $textDarkGrey;
+        display: none;
+        @include MediaQuery($md){
+          display: block;
+        }
+        div{
+          text-align: center;
+          padding-bottom: 10px;
+         a{
+          @include Text($textLightGrey, $body2, $fwMedium);
+          @include MediaQuery($sm){
+            margin-right: 20px;
+          }
+         }
+        }
+        &__item{
+          text-align: center;
+          img{
+            width: 30px;
+            margin-right: 10px;
+          }
+          @include MediaQuery($sm){
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+      &__item {
+        h6 {
+          @include Text($textWhite, $body2, $fwMedium);
+        }
+        &__link {
+          a {
+            @include Text($textLightGrey, $body2, $fwMedium);
+            transition: all 0.2s;
+            &:hover{
+              color: $textWhite;
+              text-decoration: none;
+            }
+          }
+        }
+        &__logo {
+          &__row {
+            display: flex;
+            ._1logo {
+              border-radius: 30px;
+              overflow: hidden;
+              position: relative;
+              margin-right: 20px;
+              margin-bottom: 15px;
+              cursor: pointer;
+              a {
+                display: inline-block;
+                img {
+                  width: 30px;
+                  margin: auto;
+                }
+              }
+              .overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color:rgba($color: #000000, $alpha: 0.5);
+                height: 100%;
+                opacity: 0;
+                transition: all 0.2s;
+              }
+              &:hover .overlay{
+                opacity: 1;
+              }
+            }
+          }
+        }
+        &__img {
+          display: flex;
+          img {
+            width: 25px;
+            margin-right: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+      &__bottom {
+        display: flex;
+        //margin-top: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @include MediaQuery($md){
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+        @include MediaQuery($sm){
+          //display: block;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        &__img {
+          width: 80px;
+          margin-right: 20px;
+          img {
+            width: 100%;
+            border-radius: 8px;
+          }
+        }
+  
+        &__contact {
+          flex-grow: 1;
+          @include MediaQuery($md){
+            text-align: center;
+          }
+          h6 {
+            @include Text($textWhite, $body2, $fwMedium);
+            @include MediaQuery($sm){
+              margin-top: 30px;
+            }
+          }
+          p {
+            @include Text($textLightGrey, $body2, $fwMedium);
+            margin-bottom: 5px;
+            
+            a{
+              @include Text($textSecondary,$body2,$fwMedium);
+              &:hover{
+                text-decoration: none;
+              }
+            }
+          }
+        }
+        a {
+          img {
+            width: 130px;
+          }
+        }
+      }
+    }
+  }
+  

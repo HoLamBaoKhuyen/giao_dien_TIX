@@ -1,0 +1,121 @@
+@import "./theme/theme";
+@import "./helpers/mixin";
+
+body {
+  background: url(../imgs/bg2.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .menu {
+    background: rgba(20, 50, 93, 0.9);
+    width: 330px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 30px 40px 10px 40px;
+    @include MediaQuery($xs) {
+      width: 100%;
+      height: 100%;
+    }
+    a {
+      img {
+        width: 80%;
+        @include MediaQuery($xs) {
+          padding-top: 10px;
+          width: 200px;
+        }
+      }
+    }
+    p {
+      margin-top: 80px;
+      @include Text($textWhite, $body3, $fwMedium);
+      @include MediaQuery($xs) {
+        font-size: $h6;
+        //padding: 20px 40px 0 40px;
+        padding-top: 20px;
+        font-weight: $fwRegular;
+      }
+    }
+    &__btn {
+      & > div {
+        border-radius: 6px;
+        margin: 15px 0;
+        cursor: pointer;
+        // @include MediaQuery($xs){
+        //   margin: 30px 0;
+        // }
+        &:first-child {
+          background-color: $fbColor;
+          color: $textWhite;
+          div {
+            border-right: 1px solid $darkFbColor;
+          }
+          span {
+            border-left: 1px solid $lightFbColor;
+          }
+        }
+        &:nth-child(2) {
+          background-color: $zaloColor;
+          color: $textWhite;
+          div {
+            border-right: 1px solid $darkZaloColor;
+          }
+          span {
+            border-left: 1px solid $lightZaloColor;
+          }
+        }
+        &:nth-child(3) {
+          background-color: $lightGrey;
+          i {
+            color: $red;
+          }
+          div {
+            border-right: 1px solid $grey;
+          }
+          span {
+            border-left: 1px solid $paper;
+          }
+        }
+        & > div {
+          height: 100%;
+          padding: 12px 0;
+          @include MediaQuery($xs) {
+            padding: 5% 0;
+          }
+        }
+        span {
+          text-align: left;
+          padding: 12px 0;
+          padding-left: 30px;
+          @include MediaQuery($xs) {
+            padding: 5% 0;
+            padding-left: 10%;
+          }
+        }
+      }
+    }
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+      @include Button(
+        $lightFbColor,
+        $h6,
+        $fwMedium,
+        30px,
+        30px,
+        $darkBlue,
+        none,
+        50%,
+        0
+      );
+      @include MediaQuery($xs) {
+        transform: translate(0, 0);
+      }
+    }
+  }
+}

@@ -1,0 +1,654 @@
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 10px 0 #989586;
+          box-shadow: 0 0 10px 0 #989586;
+  height: 80px;
+  padding: 0 65px;
+  width: 80%;
+}
+
+@media screen and (max-width: 678px) {
+  .nav {
+    padding: 0 10px;
+    height: 60px;
+  }
+}
+
+.nav__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav__left__01 {
+  margin-right: 50px;
+  position: relative;
+}
+
+@media screen and (max-width: 678px) {
+  .nav__left__01 {
+    display: none;
+  }
+}
+
+.nav__left__01::before {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #fb4226;
+}
+
+.nav__left__01 p {
+  color: #fb4226;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.nav__left__01 p span {
+  color: #fb4226;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 678px) {
+  .nav__left__02 {
+    display: none;
+  }
+}
+
+.nav__left__02 p {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.nav__left__02 p span {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav__left__03 {
+  display: none;
+}
+
+@media screen and (max-width: 678px) {
+  .nav__left__03 {
+    display: block;
+  }
+}
+
+.nav__left__03 p {
+  color: #3c3b37;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.nav__left__03 p span {
+  color: #3c3b37;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__right__img {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  overflow: hidden;
+}
+
+.nav__right__img img {
+  width: 100%;
+}
+
+.nav__right p {
+  margin: 0 10px;
+  color: #949494;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 678px) {
+  .nav__right p {
+    display: none;
+  }
+}
+
+.content__inside {
+  width: 80%;
+  background-color: #ffffff;
+  padding: 0 80px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .content__inside {
+    padding: 0 110px 0 60px;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .content__inside {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.content__inside__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 80px 0 60px;
+}
+
+@media screen and (max-width: 992px) {
+  .content__inside__detail {
+    padding: 0;
+  }
+}
+
+.content__inside__detail__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content__inside__detail__left__img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.content__inside__detail__left__img img {
+  width: 100%;
+}
+
+.content__inside__detail__left__place {
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .content__inside__detail__left__place {
+    padding: 0;
+  }
+}
+
+.content__inside__detail__left__place p {
+  margin: 0;
+  color: #949494;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.content__inside__detail__left__place p span {
+  color: #000000;
+}
+
+.content__inside__detail__right {
+  text-align: center;
+}
+
+.content__inside__detail__right p {
+  margin: 0;
+  color: #949494;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.content__inside__detail__right p:last-child {
+  color: #fb4226;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.content__inside__seat {
+  text-align: center;
+}
+
+.content__inside__seat__bg .img {
+  background: url(../imgs/sac-dep-doi-tra-false-beauty-15803703114281_215x318.jpg);
+  min-height: calc(100% - 80px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 80px;
+  left: 0;
+  width: 4%;
+  position: fixed;
+}
+
+@media screen and (max-width: 678px) {
+  .content__inside__seat__bg {
+    display: none;
+  }
+}
+
+.content__inside__seat__screen {
+  position: relative;
+  padding: 40px 0;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.content__inside__seat__screen::before {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "";
+  width: 90%;
+  height: 10px;
+  background-color: #222;
+  -webkit-box-shadow: 0 10px 10px 5px #dcdacb;
+          box-shadow: 0 10px 10px 5px #dcdacb;
+}
+
+.content__inside__seat__note .chair-top,
+.content__inside__seat__note .chair-bot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content__inside__seat__note .chair-top div,
+.content__inside__seat__note .chair-bot div {
+  margin: 0 10px;
+}
+
+.content__inside__seat__note .chair-top div:first-child i,
+.content__inside__seat__note .chair-bot div:first-child i {
+  color: #00a50e;
+}
+
+.content__inside__seat__note .chair-top div:nth-child(2) i,
+.content__inside__seat__note .chair-bot div:nth-child(2) i {
+  color: #949494;
+}
+
+.content__inside__seat__note .chair-top div:nth-child(3) i,
+.content__inside__seat__note .chair-bot div:nth-child(3) i {
+  color: #3c3b37;
+}
+
+.content__inside__seat__note .chair-top div p,
+.content__inside__seat__note .chair-bot div p {
+  color: #949494;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.content__inside__seat__note .chair-bot div span {
+  color: #fb4226;
+  font-weight: 700;
+}
+
+.content__inside__seat .text1 {
+  color: #fb4226;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.booking {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 10px 0 #989586;
+          box-shadow: 0 0 10px 0 #989586;
+  height: 100%;
+  width: 30%;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 678px) {
+  .booking {
+    background: transparent;
+    width: 100%;
+    -webkit-box-shadow: 0 0 0 0;
+            box-shadow: 0 0 0 0;
+    padding: 0 50px;
+  }
+}
+
+.booking__price {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 0.5px dashed #dcdacb;
+}
+
+.booking__price p {
+  color: #7ed321;
+  font-size: 34px;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media screen and (max-width: 678px) {
+  .booking__price {
+    padding-top: 80px;
+  }
+}
+
+.booking__info {
+  border-bottom: 0.5px dashed #dcdacb;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 678px) {
+  .booking__info {
+    padding-top: 450px;
+  }
+}
+
+.booking__info p {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.booking__info p:first-child {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.booking__info p span {
+  font-size: 12px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #fb4226;
+  padding: 0 5px;
+}
+
+.booking__calcPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.5px dashed #dcdacb;
+  padding: 10px 0;
+}
+
+.booking__calcPrice__img {
+  width: 20px;
+  height: auto;
+}
+
+.booking__calcPrice__img img {
+  width: 100%;
+}
+
+.booking__calcPrice p {
+  color: #7ed321;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.booking__email, .booking__phone {
+  border-bottom: 0.5px dashed #dcdacb;
+  padding: 10px 0;
+}
+
+.booking__email label, .booking__phone label {
+  color: #949494;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.booking__email input, .booking__phone input {
+  display: block;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  padding: 0;
+  outline: none;
+  height: 0;
+}
+
+.booking__email p, .booking__phone p {
+  color: #fb4226;
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.booking__coupon {
+  border-bottom: 0.5px dashed #dcdacb;
+  padding: 5px 0;
+}
+
+.booking__coupon label {
+  color: #949494;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.booking__coupon div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking__coupon div input {
+  width: 50%;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  padding: 0;
+  outline: none;
+}
+
+.booking__coupon div input::-webkit-input-placeholder {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.booking__coupon div input:-ms-input-placeholder {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.booking__coupon div input::-ms-input-placeholder {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.booking__coupon div input::placeholder {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.booking__coupon div button {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  background: #989586;
+  height: auto;
+  width: auto;
+  padding: 3px 5px;
+}
+
+@media screen and (max-width: 992px) {
+  .booking__coupon div button {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .booking__coupon div button {
+    font-size: 16px;
+  }
+}
+
+.booking__pay {
+  padding-top: 10px;
+}
+
+.booking__pay h6 {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.booking__pay p {
+  color: #fb4226;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.booking__pay div {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.booking__pay div p {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media screen and (max-width: 678px) {
+  .booking__pay div p {
+    font-size: 16px;
+  }
+}
+
+.booking__pay div p i {
+  color: #fb4226;
+}
+
+.booking__pay div p span {
+  color: #eb8a2f;
+}
+
+@media screen and (max-width: 678px) {
+  .booking__pay div {
+    margin: 150px 0 100px 0;
+  }
+}
+
+.booking__pay button {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  border-radius: 0;
+  background: #989586;
+  height: 70px;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 678px) {
+  .booking__pay button {
+    position: fixed;
+    width: 50%;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .booking__pay button {
+    height: 60px;
+    font-size: 18px;
+  }
+}
+
+.booking__pay .btn-booking {
+  display: none;
+  margin: 0;
+  height: 70px;
+  width: 50%;
+  background-color: #ffffff;
+  border-top: 1px solid #989586;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 678px) {
+  .booking__pay .btn-booking {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .booking__pay .btn-booking {
+    height: 60px;
+  }
+}
+/*# sourceMappingURL=Booking_ticket.css.map */

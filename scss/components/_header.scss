@@ -1,0 +1,119 @@
+//HEADER
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: rgba($color: $paper, $alpha: 0.95);
+    box-shadow: 0 0 10px 1px $grey;
+    padding: 0 20px;
+    z-index: 10;
+    a {
+      img {
+        height: 50px;
+      }
+    }
+    &__navbar {
+      margin-left: 100px;
+      @include MediaQuery($md) {
+        margin: 0;
+      }
+      @include MediaQuery($sm) {
+        display: none;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        li {
+          margin: 0 10px;
+          a {
+            @include Text($textPrimary, $subtitle, $fwMedium);
+            transition: all 0.2s;
+            &:hover {
+              text-decoration: none;
+              color: $textSecondary;
+            }
+          }
+        }
+      }
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      @include MediaQuery($sm) {
+        display: none;
+      }
+      p {
+        margin: 0;
+      }
+      &__login {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid $grey;
+        i {
+          @include Text($textLightGrey, $h3, $fwBold);
+        }
+        p {
+          @include Text($textLightGrey, $subtitle, $fwMedium);
+          padding: 0 10px;
+          @include MediaQuery($md) {
+            padding: 0 5px;
+          }
+        }
+      }
+      &__place {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        i {
+          @include Text($textLightGrey, $h6, $fwBold);
+        }
+        p {
+          @include Text($textLightGrey, $subtitle, $fwMedium);
+          padding: 0 10px;
+          @include MediaQuery($md) {
+            padding: 0 5px;
+          }
+        }
+        button {
+          @include Button(
+            $textLightGrey,
+            $h6,
+            $fwRegular,
+            auto,
+            auto,
+            transparent,
+            none,
+            0,
+            10px
+          );
+          @include MediaQuery($md) {
+            padding: 0;
+          }
+        }
+      }
+    }
+    &__bars {
+      display: none;
+      @include MediaQuery($sm) {
+        display: block;
+      }
+      button {
+        @include Button(
+          $textDarkGrey,
+          $h3-5,
+          $fwBold,
+          auto,
+          auto,
+          transparent,
+          none,
+          0,
+          0
+        );
+      }
+    }
+  }

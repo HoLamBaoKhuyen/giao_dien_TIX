@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/Detail_movie.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <img src="./imgs/web-logo.png" alt="" />
+      </a>
+      <nav class="header__navbar">
+        <ul>
+          <li>
+            <a href="#">Lịch chiếu</a>
+          </li>
+          <li>
+            <a href="#">Cụm rạp</a>
+          </li>
+          <li>
+            <a href="#">Tin tức</a>
+          </li>
+          <li>
+            <a href="#">Ứng dụng</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <div class="header__right__login">
+          <i class="fa fa-user-circle"></i>
+          <p>Đăng nhập</p>
+        </div>
+        <div class="header__right__place">
+          <i class="fa fa-map-marker-alt"></i>
+          <p>Hồ Chí Minh</p>
+          <button><i class="fa fa-angle-down"></i></button>
+        </div>
+      </div>
+      <div class="header__bars">
+        <button>
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="banner__bg">
+        <div class="banner__bg__overlay"></div>
+      </div>
+      <div class="banner__container">
+        <div class="banner__container__left">
+          <div class="banner__container__left__img">
+            <img
+              src="./imgs/sac-dep-doi-tra-false-beauty-15803703114281_215x318.jpg"
+              alt=""
+            />
+            <button>
+              <i class="fa fa-play"></i>
+            </button>
+          </div>
+          <div class="banner__container__left__text">
+            <p>14.02.2020</p>
+            <h3><span>C16</span>Sắc Đẹp Dối Trá - The Drama Queen</h3>
+            <p>91 phút - 0IMDb - 2D/Digital</p>
+          </div>
+        </div>
+        <div class="banner__container__right">
+          <div class="banner__container__right__score">
+            <h1>7.3</h1>
+          </div>
+          <div class="banner__container__right__star">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <span>1/2</span>
+          </div>
+          <p>270 người đánh giá</p>
+        </div>
+      </div>
+    </section>
+    <section class="banner-responsive">
+      <div class="banner-responsive__img">
+        <img
+          src="./imgs/sac-dep-doi-tra-false-beauty-c16-15814133327192.jpg"
+          alt=""
+        />
+        <div class="banner-responsive__img__overlay"></div>
+        <button>
+          <i class="fa fa-play"></i>
+        </button>
+      </div>
+      <div class="banner-responsive__text">
+        <p>14.02.2020</p>
+        <h3>Sắc Đẹp Dối Trá - The Drama Queen (C16)</h3>
+        <p>91 phút - 0IMDb - 2D/Digital</p>
+      </div>
+    </section>
+    <section class="info">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-info-tab"
+            data-toggle="tab"
+            href="#nav-info"
+            role="tab"
+            aria-controls="nav-info"
+            aria-selected="true"
+            >Thông Tin</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="nav-cmt-tab"
+            data-toggle="tab"
+            href="#nav-cmt"
+            role="tab"
+            aria-controls="nav-cmt"
+            aria-selected="false"
+            >Đánh Giá</a
+          >
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-info"
+          role="tabpanel"
+          aria-labelledby="nav-info-tab"
+        >
+          <!-- ... -->
+          <div class="row">
+            <div class="col-6">
+              <div class="info__credit">
+                <ul>
+                  <li>Ngày công chiếu</li>
+                  <li>Đạo diễn</li>
+                  <li>Diễn viên</li>
+                  <li>Thể Loại</li>
+                  <li>Định dạng</li>
+                  <li>Quốc Gia SX</li>
+                </ul>
+                <ul class="_2nd">
+                  <li>14.02.2020</li>
+                  <li>Kay Nguyễn</li>
+                  <li>Hương Giang, Puka</li>
+                  <li>hài hước, hành động</li>
+                  <li>2D/Digital</li>
+                  <li>Việt Nam</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="info__content">
+                <h6>Nội dung</h6>
+                <p>
+                  Phim xoay quanh câu chuyện cuộc đời của Dương - một anh chàng
+                  cascadeur nhưng lại mang trong mình khát khao trở thành phụ
+                  nữ. Một ngày nọ, ước mơ ấy bỗng phải trở thành hiện thực ngay
+                  lập tức khi Dương tình cờ chứng kiến một vụ giết người và buộc
+                  phải thay đổi nhân dạng để lẩn trốn. Sau cuộc phẫu thuật
+                  chuyển giới, cha của Dương đột ngột lâm bệnh nặng, khiến cô
+                  phải bất đắc dĩ tham gia vào một cuộc thi Hoa hậu để có đủ
+                  tiền lo viện phí cho cha. Kể từ đó, rất nhiều tình huống bi
+                  hài và nguy hiểm không ngừng xảy đến với cô. Cùng đoán xem
+                  Dương sẽ phải trải qua những gian truân như thế nào?
+                </p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="info__news">
+                <h6>Tin liên quan</h6>
+                <div class="info__news__img">
+                  <img
+                    src="./imgs/review-sac-dep-doi-tra-huong-giang-ke-chuyen-doi-minh-qua-phim-anh-15817958493092.jpg"
+                    alt=""
+                  />
+                </div>
+                <a href="#"
+                  >[Review] Sắc Đẹp Dối Trá - Hương Giang kể chuyện đời
+                  mình...</a
+                >
+                <div class="info__news__button">
+                  <div class="info__news__button__like">
+                    <button><i class="fa fa-thumbs-up"></i></button>
+                    <span>1</span>
+                  </div>
+                  <div class="info__news__button__cmt">
+                    <button><i class="fa fa-comment-alt"></i></button>
+                    <span>0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- end  -->
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-cmt"
+          role="tabpanel"
+          aria-labelledby="nav-cmt-tab"
+        >
+          <div class="info__rate">
+            <div class="info__rate__1st">
+              <div class="info__rate__1st__left">
+                <i class="fa fa-user-circle"></i>
+                <span>Bạn nghĩ gì về phim này?</span>
+              </div>
+              <div class="info__rate__1st__right">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+            <div class="info__rate__cmt">
+              <div class="info__rate__cmt__top">
+                <div class="ava">
+                  <div class="ava__img">
+                    <img
+                      src="./imgs/056f89aae4037cc9133d3b689e963bda.jpg"
+                      alt=""
+                    />
+                    <img src="./imgs/zalo.svg" alt="" />
+                  </div>
+                  <div class="ava__text">
+                    <p>Sumika Ichigo</p>
+                    <p>4 tháng trước</p>
+                  </div>
+                </div>
+                <div class="score">
+                  <p class="score__score">7</p>
+                  <p class="score__star">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <span>1/2</span>
+                  </p>
+                </div>
+              </div>
+              <div class="info__rate__cmt__middle">
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dolores cumque amet officiis harum incidunt eius, deleniti
+                  ratione quod nisi, explicabo atque? Reiciendis, asperiores
+                  accusamus obcaecati maiores laboriosam delectus nemo iure.
+                </p>
+                <button>Xem thêm</button>
+              </div>
+              <div class="info__rate__cmt__bottom">
+                <div>
+                  <button><i class="fa fa-thumbs-up"></i></button>
+                  <span>1</span>
+                  <span>Thích</span>
+                </div>
+                </div>
+              </div>
+              <div class="info__rate__cmt">
+                <div class="info__rate__cmt__top">
+                  <div class="ava">
+                    <div class="ava__img">
+                      <img
+                        src="./imgs/056f89aae4037cc9133d3b689e963bda.jpg"
+                        alt=""
+                      />
+                      <img src="./imgs/zalo.svg" alt="" />
+                    </div>
+                    <div class="ava__text">
+                      <p>Sumika Ichigo</p>
+                      <p>4 tháng trước</p>
+                    </div>
+                  </div>
+                  <div class="score">
+                    <p class="score__score">7</p>
+                    <p class="score__star">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <span>1/2</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="info__rate__cmt__middle">
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Dolores cumque amet officiis harum incidunt eius, deleniti
+                    ratione quod nisi, explicabo atque? Reiciendis, asperiores
+                    accusamus obcaecati maiores laboriosam delectus nemo iure.
+                  </p>
+                  <button>Xem thêm</button>
+                </div>
+                <div class="info__rate__cmt__bottom">
+                  <div>
+                    <button><i class="fa fa-thumbs-up"></i></button>
+                    <span>1</span>
+                    <span>Thích</span>
+                  </div>
+                  </div>
+                </div>
+                <div class="info__rate__cmt">
+                  <div class="info__rate__cmt__top">
+                    <div class="ava">
+                      <div class="ava__img">
+                        <img
+                          src="./imgs/056f89aae4037cc9133d3b689e963bda.jpg"
+                          alt=""
+                        />
+                        <img src="./imgs/zalo.svg" alt="" />
+                      </div>
+                      <div class="ava__text">
+                        <p>Sumika Ichigo</p>
+                        <p>4 tháng trước</p>
+                      </div>
+                    </div>
+                    <div class="score">
+                      <p class="score__score">7</p>
+                      <p class="score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="info__rate__cmt__middle">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Dolores cumque amet officiis harum incidunt eius, deleniti
+                      ratione quod nisi, explicabo atque? Reiciendis, asperiores
+                      accusamus obcaecati maiores laboriosam delectus nemo iure.
+                    </p>
+                    <button>Xem thêm</button>
+                  </div>
+                  <div class="info__rate__cmt__bottom">
+                    <div>
+                      <button><i class="fa fa-thumbs-up"></i></button>
+                      <span>1</span>
+                      <span>Thích</span>
+                    </div>
+                    </div>
+                  </div>
+               <div class="col-12 info__watch-more">
+              <button>XEM THÊM</button>
+            </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="row footer__container__top">
+          <div class="col-4">
+            <div class="footer__container__item">
+              <h6>TIX</h6>
+              <div class="row footer__container__item__link">
+                <div class="col-6">
+                  <a href="#">FAQ</a>
+                </div>
+                <div class="col-6">
+                  <a href="#">Thỏa thuận sử dụng</a>
+                </div>
+                <div class="col-6">
+                  <a href="#">Brand Guidelines</a>
+                </div>
+                <div class="col-6">
+                  <a href="#">Chính sách bảo mật</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-4">
+            <div class="footer__container__item">
+              <h6>ĐỐI TÁC</h6>
+              <div class="footer__container__item__logo">
+                <div class="footer__container__item__logo__row">
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Lotte_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/BHD_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Galaxy_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/CineStar_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Lotte_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                </div>
+                <div class="footer__container__item__logo__row">
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/BHD_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Galaxy_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/CineStar_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/BHD_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Galaxy_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                </div>
+                <div class="footer__container__item__logo__row">
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Lotte_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/BHD_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Galaxy_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/CineStar_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Lotte_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                </div>
+                <div class="footer__container__item__logo__row">
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/BHD_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Galaxy_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/CineStar_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/BHD_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                  <div class="_1logo">
+                    <a href="#">
+                      <img src="./imgs/Galaxy_logo.png" alt="" />
+                    </a>
+                    <div class="overlay"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-2">
+            <div class="footer__container__item">
+              <h6>MOBILE APP</h6>
+              <div class="footer__container__item__img">
+                <img src="./imgs/apple-logo.png" alt="" />
+                <img src="./imgs/android-logo.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-2">
+            <div class="footer__container__item">
+              <h6>SOCIAL</h6>
+              <div class="footer__container__item__img">
+                <img src="./imgs/facebook-logo.png" alt="" />
+                <img src="./imgs/zalo-logo.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- footer__bottom -->
+        <div class="footer__container__bottom">
+          <div class="footer__container__bottom__img">
+            <img src="./imgs/zion-logo.jpg" alt="" />
+          </div>
+
+          <div class="footer__container__bottom__contact">
+            <h6>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</h6>
+            <div>
+              <p>
+                Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ
+                Chí Minh, Việt Nam.
+              </p>
+              <p>Giấy chứng nhận đăng ký kinh doanh số: 0101659783,</p>
+              <p>
+                đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế
+                hoạch và đầu tư Thành phố Hồ Chí Minh cấp.
+              </p>
+              <p>Số Điện Thoại (Hotline): 1900 545 436</p>
+              <p>Email: <a href="mailto:support@tix.vn">support@tix.vn</a></p>
+            </div>
+          </div>
+          <a href="#">
+            <img src="./imgs/d1e6bd560daa9e20131ea8a0f62e87f8.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,433 @@
+@import "../scss/theme/theme";
+@import "../scss/helpers/mixin";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px 0 $grey;
+  height: 80px;
+  padding: 0 65px;
+  width: 80%;
+  @include MediaQuery($sm) {
+    padding: 0 10px;
+    height: 60px;
+  }
+  &__left {
+    display: flex;
+    justify-content: space-around;
+    &__01 {
+      margin-right: 50px;
+      position: relative;
+      @include MediaQuery($sm) {
+        display: none;
+      }
+      &::before {
+        position: absolute;
+        top: -30px;
+        right: 0;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: $secondary;
+      }
+      p {
+        @include Text($textSecondary, $h6, $fwMedium);
+        margin: 0;
+        span {
+          @include Text($textSecondary, $body3, $fwMedium);
+        }
+      }
+    }
+    &__02 {
+      @include MediaQuery($sm) {
+        display: none;
+      }
+      p {
+        @include Text($textPrimary, $h6, $fwMedium);
+        margin: 0;
+        span {
+          @include Text($textPrimary, $body3, $fwMedium);
+        }
+      }
+    }
+    &__03 {
+      display: none;
+      @include MediaQuery($sm) {
+        display: block;
+      }
+      p {
+        @include Text($textDarkGrey, $h6, $fwMedium);
+        margin: 0;
+        span {
+          @include Text($textDarkGrey, $body3, $fwMedium);
+        }
+      }
+    }
+  }
+  &__right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__img {
+      border-radius: 50%;
+      height: 35px;
+      width: 35px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      margin: 0 10px;
+      @include Text($textLightGrey, $h6, $fwRegular);
+      @include MediaQuery($sm) {
+        display: none;
+      }
+    }
+  }
+}
+.content {
+  &__inside {
+    width: 80%;
+    background-color: $paper;
+    padding: 0 80px;
+    margin-top: 20px;
+    @include MediaQuery($md) {
+      //@extend: 100%;
+      padding: 0 110px 0 60px;
+    }
+    @include MediaQuery($sm) {
+      width: 100%;
+      padding: 0 20px;
+    }
+    &__detail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 80px 0 60px;
+      @include MediaQuery($md) {
+        padding: 0;
+      }
+      &__left {
+        display: flex;
+        align-items: center;
+        &__img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          img {
+            width: 100%;
+          }
+        }
+        &__place {
+          padding-left: 20px;
+          @include MediaQuery($md) {
+            padding: 0;
+          }
+          p {
+            margin: 0;
+            @include Text($textLightGrey, $h6, $fwRegular);
+            span {
+              color: $textPrimary;
+            }
+          }
+        }
+      }
+      &__right {
+        text-align: center;
+        p {
+          margin: 0;
+          @include Text($textLightGrey, $body1, $fwRegular);
+          &:last-child {
+            @include Text($textSecondary, $h3, $fwMedium);
+          }
+        }
+      }
+    }
+    &__seat {
+      text-align: center;
+      &__bg {
+        .img {
+          background: url(../imgs/sac-dep-doi-tra-false-beauty-15803703114281_215x318.jpg);
+          min-height: calc(100% - 80px);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          top: 80px;
+          left: 0;
+          //float: left;
+          width: 4%;
+          position: fixed;
+        }
+        @include MediaQuery($sm) {
+          display: none;
+        }
+      }
+      &__screen {
+        position: relative;
+        padding: 40px 0;
+        @include Text($textPrimary, $h6, $fwMedium);
+        &::before {
+          position: absolute;
+          top: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          content: "";
+          width: 90%;
+          height: 10px;
+          background-color: $darkGrey;
+          box-shadow: 0 10px 10px 5px $lightGrey;
+        }
+      }
+      &__note {
+        .chair-top,
+        .chair-bot {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          div {
+            margin: 0 10px;
+            &:first-child {
+              i {
+                color: $textGreen;
+              }
+            }
+            &:nth-child(2) {
+              i {
+                color: $textLightGrey;
+              }
+            }
+            &:nth-child(3) {
+              i {
+                color: $textDarkGrey;
+              }
+            }
+
+            p {
+              @include Text($textLightGrey, $body2, $fwRegular);
+              margin: 0;
+            }
+          }
+        }
+        .chair-bot {
+          div {
+            span {
+              color: $textSecondary;
+              font-weight: $fwBold;
+            }
+          }
+        }
+      }
+      .text1 {
+        @include Text($textSecondary, $subtitle, $fwMedium);
+      }
+    }
+  }
+}
+.booking {
+  // display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $paper;
+  box-shadow: 0 0 10px 0 $grey;
+  height: 100%;
+  width: 30%;
+  padding: 0 20px;
+  @include MediaQuery($sm) {
+    background: transparent;
+    width: 100%;
+    box-shadow: 0 0 0 0;
+    padding: 0 50px;
+  }
+  &__price {
+    p {
+      @include Text($textLightGreen, $h2-5, $fwMedium);
+      margin: 0;
+    }
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 0.5px dashed $lightGrey;
+    @include MediaQuery($sm) {
+      padding-top: 80px;
+    }
+  }
+  &__info {
+    border-bottom: 0.5px dashed $lightGrey;
+    padding: 10px 0;
+    @include MediaQuery($sm) {
+      padding-top: 450px;
+    }
+    p {
+      @include Text($textPrimary, $body3, $fwRegular);
+      margin: 0;
+      &:first-child {
+        @include Text($textPrimary, $subtitle, $fwMedium);
+      }
+      span {
+        font-size: $body2;
+        color: $textWhite;
+        border-radius: 5px;
+        background-color: $secondary;
+        padding: 0 5px;
+      }
+    }
+  }
+  &__calcPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px dashed $lightGrey;
+    padding: 10px 0;
+    &__img {
+      width: 20px;
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      @include Text($textLightGreen, $h6, $fwMedium);
+      margin: 0;
+    }
+  }
+  &__email,
+  &__phone {
+    border-bottom: 0.5px dashed $lightGrey;
+    padding: 10px 0;
+    label {
+      @include Text($textLightGrey, $h6, $fwMedium);
+      margin: 0;
+    }
+    input {
+      display: block;
+      @include Input($textPrimary, $h6, $fwMedium, none, none, transparent, 0);
+      height: 0;
+    }
+    p {
+      @include Text($textSecondary, $body1, $fwRegular);
+      margin: 0;
+    }
+  }
+  &__coupon {
+    border-bottom: 0.5px dashed $lightGrey;
+    padding: 5px 0;
+    label {
+      @include Text($textLightGrey, $body3, $fwRegular);
+      margin: 0;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      input {
+        width: 50%;
+        &::placeholder {
+          @include Text($textPrimary, $body3, $fwRegular);
+        }
+        @include Input(
+          $textPrimary,
+          $h6,
+          $fwMedium,
+          none,
+          none,
+          transparent,
+          0
+        );
+      }
+      button {
+        @include Button(
+          $textWhite,
+          $body3,
+          $fwMedium,
+          auto,
+          auto,
+          $grey,
+          none,
+          5px,
+          3px 5px
+        );
+        @include MediaQuery($md) {
+          font-size: $body1;
+        }
+        @include MediaQuery($sm) {
+          font-size: $h6;
+        }
+      }
+    }
+  }
+  &__pay {
+    padding-top: 10px;
+    h6 {
+      @include Text($textPrimary, $h7, $fwMedium);
+    }
+    p {
+      @include Text($textSecondary, $body2, $fwMedium);
+    }
+    div {
+      margin-top: 50px;
+      text-align: center;
+      p {
+        @include Text($textPrimary, $body3, $fwRegular);
+        margin: 0;
+        @include MediaQuery($sm) {
+          font-size: $h6;
+        }
+        i {
+          color: $textSecondary;
+        }
+        span {
+          color: $textLightOrange;
+        }
+      }
+      @include MediaQuery($sm) {
+        margin: 150px 0 100px 0;
+      }
+    }
+
+    button {
+      @include Button(
+        $textWhite,
+        $h4,
+        $fwRegular,
+        70px,
+        100%,
+        $grey,
+        none,
+        0,
+        0
+      );
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include MediaQuery($sm) {
+        position: fixed;
+        width: 50%;
+        text-transform:uppercase;
+      }
+      @include MediaQuery($xs){
+        height: 60px;
+        font-size: $h5;
+       
+      }
+    }
+    .btn-booking{
+      display: none;
+      margin: 0;
+      height: 70px;
+      width: 50%;
+      background-color: $paper;
+      border-top: 1px solid $grey;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      @include MediaQuery($sm) {
+      display: block;
+      }
+      @include MediaQuery($xs){
+        height: 60px;
+      }
+    }
+  }
+}

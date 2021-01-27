@@ -1,0 +1,149 @@
+body {
+  background: url(../imgs/bg2.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body .menu {
+  background: rgba(20, 50, 93, 0.9);
+  width: 330px;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  padding: 30px 40px 10px 40px;
+}
+
+@media screen and (max-width: 576px) {
+  body .menu {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+body .menu a img {
+  width: 80%;
+}
+
+@media screen and (max-width: 576px) {
+  body .menu a img {
+    padding-top: 10px;
+    width: 200px;
+  }
+}
+
+body .menu p {
+  margin-top: 80px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 576px) {
+  body .menu p {
+    font-size: 16px;
+    padding-top: 20px;
+    font-weight: 400;
+  }
+}
+
+body .menu__btn > div {
+  border-radius: 6px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+body .menu__btn > div:first-child {
+  background-color: #3a5fb3;
+  color: #ffffff;
+}
+
+body .menu__btn > div:first-child div {
+  border-right: 1px solid #3e599a;
+}
+
+body .menu__btn > div:first-child span {
+  border-left: 1px solid #5878c0;
+}
+
+body .menu__btn > div:nth-child(2) {
+  background-color: #0ea4dc;
+  color: #ffffff;
+}
+
+body .menu__btn > div:nth-child(2) div {
+  border-right: 1px solid #1192c3;
+}
+
+body .menu__btn > div:nth-child(2) span {
+  border-left: 1px solid #60c6ec;
+}
+
+body .menu__btn > div:nth-child(3) {
+  background-color: #dcdacb;
+}
+
+body .menu__btn > div:nth-child(3) i {
+  color: #e22a43;
+}
+
+body .menu__btn > div:nth-child(3) div {
+  border-right: 1px solid #989586;
+}
+
+body .menu__btn > div:nth-child(3) span {
+  border-left: 1px solid #ffffff;
+}
+
+body .menu__btn > div > div {
+  height: 100%;
+  padding: 12px 0;
+}
+
+@media screen and (max-width: 576px) {
+  body .menu__btn > div > div {
+    padding: 5% 0;
+  }
+}
+
+body .menu__btn > div span {
+  text-align: left;
+  padding: 12px 0;
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 576px) {
+  body .menu__btn > div span {
+    padding: 5% 0;
+    padding-left: 10%;
+  }
+}
+
+body .menu .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  color: #5878c0;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50%;
+  background: #0a2029;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+}
+
+@media screen and (max-width: 576px) {
+  body .menu .btn-close {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+/*# sourceMappingURL=Login.css.map */

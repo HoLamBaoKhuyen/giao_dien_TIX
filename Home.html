@@ -1,0 +1,2582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/Home.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <img src="./imgs/web-logo.png" alt="" />
+      </a>
+      <nav class="header__navbar">
+        <ul>
+          <li>
+            <a href="#">Lịch chiếu</a>
+          </li>
+          <li>
+            <a href="#">Cụm rạp</a>
+          </li>
+          <li>
+            <a href="#">Tin tức</a>
+          </li>
+          <li>
+            <a href="#">Ứng dụng</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <div class="header__right__login">
+          <i class="fa fa-user-circle"></i>
+          <p>Đăng nhập</p>
+        </div>
+        <div class="header__right__place">
+          <i class="fa fa-map-marker-alt"></i>
+          <p>Hồ Chí Minh</p>
+          <button><i class="fa fa-angle-down"></i></button>
+        </div>
+      </div>
+      <div class="header__bars">
+        <button>
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <section class="slider">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active item--1">
+            <!-- <img src="./imgs/ong-ke-15937150647111.jpg" alt=""> -->
+          </div>
+          <div class="carousel-item item--2">
+            <!-- <img src="./imgs/bcvh-15937877805400.jpg" alt=""> -->
+          </div>
+          <div class="carousel-item item--3">
+            <!-- <img src="./imgs/trung-15937150035140.jpg" alt=""> -->
+          </div>
+          <div class="carousel-item item--4">
+            <!-- <img src="./imgs/soi-15937149382284.png" alt=""> -->
+          </div>
+          <div class="carousel-item item--5">
+            <!-- <img src="./imgs/ke-xam-nhap-15937148097757.png" alt=""> -->
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="slider__option">
+        <div class="slider__option__item">
+          <span>Phim</span>
+          <button><i class="fa fa-angle-down"></i></button>
+        </div>
+        <div class="slider__option__item">
+          <span>Rạp</span>
+          <button><i class="fa fa-angle-down"></i></button>
+        </div>
+        <div class="slider__option__item">
+          <span>Suất chiếu</span>
+          <button><i class="fa fa-angle-down"></i></button>
+        </div>
+        <button class="slider__option__button">MUA VÉ NGAY</button>
+      </div>
+    </section>
+    <section class="movies">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-now-tab"
+            data-toggle="tab"
+            href="#nav-now"
+            role="tab"
+            aria-controls="nav-now"
+            aria-selected="true"
+            >Đang Chiếu</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="nav-soon-tab"
+            data-toggle="tab"
+            href="#nav-soon"
+            role="tab"
+            aria-controls="nav-soon"
+            aria-selected="false"
+            >Sắp Chiếu</a
+          >
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-now"
+          role="tabpanel"
+          aria-labelledby="nav-now-tab"
+        >
+          <!-- /// -->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/soi-100-100-wolf-p-15922080817996_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF (P)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">7.7</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/bang-chung-vo-hinh-15891673139788_215x318.jpg"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C18</span>Bằng Chứng Vô Hình - (C18)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">7.2</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/dem-song-con-survive-the-night-c16-15934022421094_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p>
+                          <span>C16</span>Đêm Sống Còn - Survive The Night (C16)
+                        </p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">6.3</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C18</span>Kẻ Xâm Nhập - Intruder (C18)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">8</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_215x318.jpg"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C16</span>Nắng 3: Lời Hứa Của Cha - Search Out (C16)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">7.9</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/phi-vu-bao-to-force-of-nature-c18-15929695543645_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C18</span>Phi Vụ Bão Tố - Force Of Nature - (C18)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">6.5</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/tieng-vong-tu-dia-nguc-the-voices-c16-15934044404750_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p>
+                          <span>C16</span>Tiến Vọng Từ Địa Ngục - The Voices (C16)
+                        </p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">5.3</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/tran-chien-midway-15904626652053_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C16</span>Trận Chiến Midway</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">7.8</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/dem-song-con-survive-the-night-c16-15934022421094_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p>
+                          <span>C16</span>Đêm Sống Còn - Survive The Night (C16)
+                        </p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">6.3</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C18</span>Kẻ Xâm Nhập - Intruder (C18)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">8</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_215x318.jpg"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C16</span>Nắng 3: Lời Hứa Của Cha - Search Out (C16)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">7.9</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/phi-vu-bao-to-force-of-nature-c18-15929695543645_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C18</span>Phi Vụ Bão Tố - Force Of Nature - (C18)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">6.5</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/tieng-vong-tu-dia-nguc-the-voices-c16-15934044404750_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p>
+                          <span>C16</span>Tiến Vọng Từ Địa Ngục - The Voices (C16)
+                        </p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">5.3</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/tran-chien-midway-15904626652053_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C16</span>Trận Chiến Midway</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">7.8</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/soi-100-100-wolf-p-15922080817996_215x318.png"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF (P)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">7.7</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="swiper-slide__item">
+                      <div class="swiper-slide__img">
+                        <img
+                          src="./imgs/bang-chung-vo-hinh-15891673139788_215x318.jpg"
+                          alt=""
+                        />
+                        <div class="swiper-slide__img__overlay">
+                          <button><i class="fa fa-play"></i></button>
+                        </div>
+
+                      </div>
+                      <div class="swiper-slide__title">
+                        <p><span>C18</span>Bằng Chứng Vô Hình - (C18)</p>
+                        <p class="time">96 phút</p>
+                        <button>MUA VÉ</button>
+                      </div>
+                      <div class="swiper-slide__score">
+                        <p class="score">7.2</p>
+                        <p class="swiper-slide__score__star">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <span>1/2</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+
+          <!-- /// -->
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-soon"
+          role="tabpanel"
+          aria-labelledby="nav-soon-tab"
+        >
+        <!-- ----------- -->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/soi-100-100-wolf-p-15922080817996_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF (P)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">7.7</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/bang-chung-vo-hinh-15891673139788_215x318.jpg"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C18</span>Bằng Chứng Vô Hình - (C18)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">7.2</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/dem-song-con-survive-the-night-c16-15934022421094_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p>
+                        <span>C16</span>Đêm Sống Còn - Survive The Night (C16)
+                      </p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">6.3</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C18</span>Kẻ Xâm Nhập - Intruder (C18)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">8</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_215x318.jpg"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C16</span>Nắng 3: Lời Hứa Của Cha - Search Out (C16)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">7.9</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/phi-vu-bao-to-force-of-nature-c18-15929695543645_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C18</span>Phi Vụ Bão Tố - Force Of Nature - (C18)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">6.5</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/tieng-vong-tu-dia-nguc-the-voices-c16-15934044404750_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p>
+                        <span>C16</span>Tiến Vọng Từ Địa Ngục - The Voices (C16)
+                      </p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">5.3</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/tran-chien-midway-15904626652053_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C16</span>Trận Chiến Midway</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">7.8</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/dem-song-con-survive-the-night-c16-15934022421094_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p>
+                        <span>C16</span>Đêm Sống Còn - Survive The Night (C16)
+                      </p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">6.3</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C18</span>Kẻ Xâm Nhập - Intruder (C18)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">8</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_215x318.jpg"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C16</span>Nắng 3: Lời Hứa Của Cha - Search Out (C16)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">7.9</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/phi-vu-bao-to-force-of-nature-c18-15929695543645_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C18</span>Phi Vụ Bão Tố - Force Of Nature - (C18)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">6.5</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/tieng-vong-tu-dia-nguc-the-voices-c16-15934044404750_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p>
+                        <span>C16</span>Tiến Vọng Từ Địa Ngục - The Voices (C16)
+                      </p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">5.3</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/tran-chien-midway-15904626652053_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C16</span>Trận Chiến Midway</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">7.8</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/soi-100-100-wolf-p-15922080817996_215x318.png"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF (P)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">7.7</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="swiper-slide__item">
+                    <div class="swiper-slide__img">
+                      <img
+                        src="./imgs/bang-chung-vo-hinh-15891673139788_215x318.jpg"
+                        alt=""
+                      />
+                      <div class="swiper-slide__img__overlay">
+                        <button><i class="fa fa-play"></i></button>
+                      </div>
+
+                    </div>
+                    <div class="swiper-slide__title">
+                      <p><span>C18</span>Bằng Chứng Vô Hình - (C18)</p>
+                      <p class="time">96 phút</p>
+                      <button>MUA VÉ</button>
+                    </div>
+                    <div class="swiper-slide__score">
+                      <p class="score">7.2</p>
+                      <p class="swiper-slide__score__star">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span>1/2</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        
+
+        <!-- ----------  -->
+          </div>
+        </div>
+   
+    </section>
+    <section class="cinema">
+      <div class="row">
+        <div class="col-1 firstCol">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-CGV-tab" data-toggle="pill" href="#v-pills-CGV" role="tab" aria-controls="v-pills-CGV" aria-selected="true">
+              <img src="./imgs/CGV_logo.png" alt="">
+              <div class="firstCol__overlay"></div>
+            </a>
+            <a class="nav-link" id="v-pills-BHD-tab" data-toggle="pill" href="#v-pills-BHD" role="tab" aria-controls="v-pills-BHD" aria-selected="false">
+              <img src="./imgs/BHD_logo.png" alt="">
+              <div class="firstCol__overlay"></div>
+            </a>
+            <a class="nav-link" id="v-pills-Galaxy-tab" data-toggle="pill" href="#v-pills-Galaxy" role="tab" aria-controls="v-pills-Galaxy" aria-selected="false">
+              
+                <img src="./imgs/Galaxy_logo.png" alt="">
+                <div class="firstCol__overlay"></div>
+            </a>
+            <a class="nav-link" id="v-pills-CNS-tab" data-toggle="pill" href="#v-pills-CNS" role="tab" aria-controls="v-pills-CNS" aria-selected="false">
+              <img src="./imgs/CineStar_logo.png" alt="">
+              <div class="firstCol__overlay"></div>
+            </a>
+            <a class="nav-link" id="v-pills-DDC-tab" data-toggle="pill" href="#v-pills-DDC" role="tab" aria-controls="v-pills-DDC" aria-selected="true">
+              <img src="./imgs/DDC_logo.png" alt="">
+              <div class="firstCol__overlay"></div>
+            </a>
+            <a class="nav-link" id="v-pills-DCINE-tab" data-toggle="pill" href="#v-pills-DCINE" role="tab" aria-controls="v-pills-DCINE" aria-selected="false">
+              <img src="./imgs/DCINE_logo.jpg" alt="">
+              <div class="firstCol__overlay"></div>
+            </a>
+            <a class="nav-link" id="v-pills-Lotte-tab" data-toggle="pill" href="#v-pills-Lotte" role="tab" aria-controls="v-pills-Lotte" aria-selected="false">      
+                <img src="./imgs/Lotte_logo.png" alt="">
+                <div class="firstCol__overlay"></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-11">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-CGV" role="tabpanel" aria-labelledby="v-pills-CGV-tab">
+              <!-- content  -->
+              <div class="row book-movie">
+                <div class="col-6 col-md-5 secondCol">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-Vincom1-tab" data-toggle="pill" href="#v-pills-Vincom1" role="tab" aria-controls="v-pills-Vincom1" aria-selected="true">
+                      <!-- Vincom1  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/cgv-liberty-citypoint-15380174430184.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-Vincom2-tab" data-toggle="pill" href="#v-pills-Vincom2" role="tab" aria-controls="v-pills-Vincom2" aria-selected="false">
+                      <!-- Vincom2  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/cgv-liberty-citypoint-15380174430184.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-Vincom3-tab" data-toggle="pill" href="#v-pills-Vincom3" role="tab" aria-controls="v-pills-Vincom3" aria-selected="false">
+                      <!-- Vincom3  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/cgv-liberty-citypoint-15380174430184.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-Vincom4-tab" data-toggle="pill" href="#v-pills-Vincom4" role="tab" aria-controls="v-pills-Vincom4" aria-selected="false">
+                      <!-- Vincom4 -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/cgv-liberty-citypoint-15380174430184.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-6 col-md-7 thirdCol">
+                  <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-Vincom1" role="tabpanel" aria-labelledby="v-pills-Vincom1-tab">
+                      <!-- Inside Vincom1  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- ---  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-Vincom2" role="tabpanel" aria-labelledby="v-pills-Vincom2-tab">
+                      <!-- 2 inside Vincom  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-Vincom3" role="tabpanel" aria-labelledby="v-pills-Vincom3-tab">
+                      <div class="thirdCol__cell">Không có suất chiếu</div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-Vincom4" role="tabpanel" aria-labelledby="v-pills-Vincom4-tab">
+                      <div class="thirdCol__cell">Không có suất chiếu</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end content  -->
+            </div>
+            <div class="tab-pane fade" id="v-pills-BHD" role="tabpanel" aria-labelledby="v-pills-BHD-tab">
+              <!-- content  -->
+              <div class="row book-movie">
+                <div class="col-6 col-md-5 secondCol">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-BHD1-tab" data-toggle="pill" href="#v-pills-BHD1" role="tab" aria-controls="v-pills-BHD1" aria-selected="true">
+                      <!-- BHD1  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/bhd-star-bitexco-15379552241200.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-BHD2-tab" data-toggle="pill" href="#v-pills-BHD2" role="tab" aria-controls="v-pills-BHD2" aria-selected="false">
+                      <!-- BHD2  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/bhd-star-pham-hung-15379533093101.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-BHD3-tab" data-toggle="pill" href="#v-pills-BHD3" role="tab" aria-controls="v-pills-BHD3" aria-selected="false">
+                      <!-- BHD3  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/cgv-liberty-citypoint-15380174430184.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-BHD4-tab" data-toggle="pill" href="#v-pills-BHD4" role="tab" aria-controls="v-pills-BHD4" aria-selected="false">
+                      <!-- BHD4 -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/cgv-liberty-citypoint-15380174430184.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-6 col-md-7 thirdCol">
+                  <div class="tab-content" id="v-pills-tabContent--2">
+                    <div class="tab-pane fade show active" id="v-pills-BHD1" role="tabpanel" aria-labelledby="v-pills-BHD1-tab">
+                      <!-- Inside BHD1  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- ---  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-BHD2" role="tabpanel" aria-labelledby="v-pills-BHD2-tab">
+                      <!-- 2 inside BHD  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-BHD3" role="tabpanel" aria-labelledby="v-pills-BHD3-tab">
+                      <div class="thirdCol__cell">Không có suất chiếu</div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-BHD4" role="tabpanel" aria-labelledby="v-pills-BHD4-tab">
+                      <div class="thirdCol__cell">Không có suất chiếu</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end content  -->
+            </div>
+            <div class="tab-pane fade" id="v-pills-Galaxy" role="tabpanel" aria-labelledby="v-pills-Galaxy-tab">
+              <!-- content  -->
+              <div class="row book-movie">
+                <div class="col-6 col-md-5 secondCol">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-Galaxy1-tab" data-toggle="pill" href="#v-pills-Galaxy1" role="tab" aria-controls="v-pills-Galaxy1" aria-selected="true">
+                      <!-- Galaxy1  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/galaxy-linh-trung-15791435324335.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-Galaxy2-tab" data-toggle="pill" href="#v-pills-Galaxy2" role="tab" aria-controls="v-pills-Galaxy2" aria-selected="false">
+                      <!-- Galaxy2  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/galaxy-linh-trung-15791435324335.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+                <div class="col-6 col-md-7 thirdCol">
+                  <div class="tab-content" id="v-pills-tabContent--3">
+                    <div class="tab-pane fade show active" id="v-pills-Galaxy1" role="tabpanel" aria-labelledby="v-pills-Galaxy1-tab">
+                      <!-- Inside Galaxy1  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_60x60.png" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                            <p><span class="">C13</span>Kẻ xâm nhập - Intruder </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- ---  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-Galaxy2" role="tabpanel" aria-labelledby="v-pills-Galaxy2-tab">
+                      <!-- 2 inside Galaxy  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_60x60.png" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="">C13</span>Kẻ xâm nhập - Intruder </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end content  -->
+            </div>
+            <div class="tab-pane fade" id="v-pills-CNS" role="tabpanel" aria-labelledby="v-pills-CNS-tab">
+              <div class="row book-movie">
+                <div class="col-6 col-md-5 secondCol">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-CNS1-tab" data-toggle="pill" href="#v-pills-CNS1" role="tab" aria-controls="v-pills-CNS1" aria-selected="true">
+                      <!-- CNS1  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/cinestar-hai-ba-trung-15383833704033.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-CNS2-tab" data-toggle="pill" href="#v-pills-CNS2" role="tab" aria-controls="v-pills-CNS2" aria-selected="false">
+                      <!-- CNS2  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/cinestar-hai-ba-trung-15383833704033.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+                <div class="col-6 col-md-7 thirdCol">
+                  <div class="tab-content" id="v-pills-tabContent--3">
+                    <div class="tab-pane fade show active" id="v-pills-CNS1" role="tabpanel" aria-labelledby="v-pills-CNS1-tab">
+                      <!-- Inside CNS1  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_60x60.png" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                            <p><span class="">C13</span>Kẻ xâm nhập - Intruder </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- ---  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-CNS2" role="tabpanel" aria-labelledby="v-pills-CNS2-tab">
+                      <!-- 2 inside CNS  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_60x60.png" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="">C13</span>Kẻ xâm nhập - Intruder </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-DDC" role="tabpanel" aria-labelledby="v-pills-DDC-tab">
+             <!-- content  -->
+             <div class="row book-movie">
+              <div class="col-6 col-md-5 secondCol">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-link active" id="v-pills-DDC1-tab" data-toggle="pill" href="#v-pills-DDC1" role="tab" aria-controls="v-pills-DDC1" aria-selected="true">
+                    <!-- DDC1  -->
+                    <div class="secondCol__cell">
+                      <div class="secondCol__cell__content">
+                        <img src="./imgs/ddc-dong-da-15379624326697.jpg" alt="">
+                        <div class="secondCol__cell__content__info">
+                          <p><span> CGV</span> - Vincom Gò Vấp</p>
+                          <p>Tầng 5 - TTTM Vincom Plaza</p>
+                          <span>[chi tiết]</span>
+                        </div>
+                      </div>
+                      <div class="secondCol__cell__overlay"></div>
+                    </div>
+                  </a>
+                  <a class="nav-link" id="v-pills-DDC2-tab" data-toggle="pill" href="#v-pills-DDC2" role="tab" aria-controls="v-pills-DDC2" aria-selected="false">
+                    <!-- DDC2  -->
+                    <div class="secondCol__cell">
+                      <div class="secondCol__cell__content">
+                        <img src="./imgs/ddc-dong-da-15379624326697.jpg" alt="">
+                        <div class="secondCol__cell__content__info">
+                          <p><span> CGV</span> - Vincom Gò Vấp</p>
+                          <p>Tầng 5 - TTTM Vincom Plaza</p>
+                          <span>[chi tiết]</span>
+                        </div>
+                      </div>
+                      <div class="secondCol__cell__overlay"></div>
+                    </div>
+                  </a>
+                  
+                  
+                </div>
+              </div>
+              <div class="col-6 col-md-7 thirdCol">
+                <div class="tab-content" id="v-pills-tabContent--3">
+                  <div class="tab-pane fade show active" id="v-pills-DDC1" role="tabpanel" aria-labelledby="v-pills-DDC1-tab">
+                    <!-- Inside DDC1  -->
+                    <div class="thirdCol__cell">
+                      <div class="thirdCol__cell__movie">
+                        <img src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_60x60.png" alt="">
+                        <div class="thirdCol__cell__movie__info">
+                          <p><span class="">C13</span>Kẻ xâm nhập - Intruder </p>
+                            <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                        </div>
+                      </div>
+                      <h6>2D Digital</h6>
+                      <div class="thirdCol__cell__time">
+                        <button disabled>
+                          <p>21:45 <span> ~ 23:16</span></p>
+                        </button>
+                        <button disabled>
+                          <p>21:45 <span> ~ 23:16</span></p>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- ---  -->
+                    <div class="thirdCol__cell">
+                      <div class="thirdCol__cell__movie">
+                        <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                        <div class="thirdCol__cell__movie__info">
+                            <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                            <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                        </div>
+                      </div>
+                      <h6>2D Digital</h6>
+                      <div class="thirdCol__cell__time">
+                        <button disabled>
+                          <p>21:45 <span> ~ 23:16</span></p>
+                        </button>
+                        <button disabled>
+                          <p>21:45 <span> ~ 23:16</span></p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="v-pills-DDC2" role="tabpanel" aria-labelledby="v-pills-DDC2-tab">
+                    <!-- 2 inside DDC  -->
+                    <div class="thirdCol__cell">
+                      <div class="thirdCol__cell__movie">
+                        <img src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_60x60.png" alt="">
+                        <div class="thirdCol__cell__movie__info">
+                            <p><span class="">C13</span>Kẻ xâm nhập - Intruder </p>
+                            <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                        </div>
+                      </div>
+                      <h6>2D Digital</h6>
+                      <div class="thirdCol__cell__time">
+                        <button disabled>
+                          <p>21:45 <span> ~ 23:16</span></p>
+                        </button>
+                        <button disabled>
+                          <p>21:45 <span> ~ 23:16</span></p>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <!-- end content  -->
+            </div>
+            <div class="tab-pane fade" id="v-pills-DCINE" role="tabpanel" aria-labelledby="v-pills-DCINE-tab">
+              <div class="row book-movie">
+                <div class="col-6 col-md-5 secondCol">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-DCINE1-tab" data-toggle="pill" href="#v-pills-DCINE1" role="tab" aria-controls="v-pills-DCINE1" aria-selected="true">
+                      <!-- DCINE1  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/dcine-ben-thanh-15738149453578.png" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-DCINE2-tab" data-toggle="pill" href="#v-pills-DCINE2" role="tab" aria-controls="v-pills-DCINE2" aria-selected="false">
+                      <!-- DCINE2  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/dcine-ben-thanh-15738149453578.png" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+                <div class="col-6 col-md-7 thirdCol">
+                  <div class="tab-content" id="v-pills-tabContent--3">
+                    <div class="tab-pane fade show active" id="v-pills-DCINE1" role="tabpanel" aria-labelledby="v-pills-DCINE1-tab">
+                      <!-- Inside DCINE1  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_60x60.png" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                            <p><span class="">C13</span>Kẻ xâm nhập - Intruder </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- ---  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-DCINE2" role="tabpanel" aria-labelledby="v-pills-DCINE2-tab">
+                      <!-- 2 inside DCINE  -->
+                      <div class="thirdCol__cell">
+                        Không có suất chiếu
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-Lotte" role="tabpanel" aria-labelledby="v-pills-Lotte-tab">
+              <!-- content  -->
+              <div class="row book-movie">
+                <div class="col-6 col-md-5 secondCol">
+                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-Lotte1-tab" data-toggle="pill" href="#v-pills-Lotte1" role="tab" aria-controls="v-pills-Lotte1" aria-selected="true">
+                      <!-- Lotte1  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/lotte-cinema-cong-hoa-15383860949090.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    <a class="nav-link" id="v-pills-Lotte2-tab" data-toggle="pill" href="#v-pills-Lotte2" role="tab" aria-controls="v-pills-Lotte2" aria-selected="false">
+                      <!-- Lotte2  -->
+                      <div class="secondCol__cell">
+                        <div class="secondCol__cell__content">
+                          <img src="./imgs/lotte-cinema-cong-hoa-15383860949090.jpg" alt="">
+                          <div class="secondCol__cell__content__info">
+                            <p><span> CGV</span> - Vincom Gò Vấp</p>
+                            <p>Tầng 5 - TTTM Vincom Plaza</p>
+                            <span>[chi tiết]</span>
+                          </div>
+                        </div>
+                        <div class="secondCol__cell__overlay"></div>
+                      </div>
+                    </a>
+                    
+                    
+                  </div>
+                </div>
+                <div class="col-6 col-md-7 thirdCol">
+                  <div class="tab-content" id="v-pills-tabContent--3">
+                    <div class="tab-pane fade show active" id="v-pills-Lotte1" role="tabpanel" aria-labelledby="v-pills-Lotte1-tab">
+                      <!-- Inside Lotte1  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/ke-xam-nhap-intruder-c13-15916713941732_60x60.png" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                            <p><span class="">C13</span>Kẻ xâm nhập - Intruder </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- ---  -->
+                      <div class="thirdCol__cell">
+                        <div class="thirdCol__cell__movie">
+                          <img src="./imgs/nang-3-loi-hua-cua-cha-c16-15827063492648_60x60.jpg" alt="">
+                          <div class="thirdCol__cell__movie__info">
+                              <p><span class="tag-p">P</span>SÓI 100% - 100% WOLF </p>
+                              <p class="time">96 phút - TIX 5.3 - IMDb 0</p>
+                          </div>
+                        </div>
+                        <h6>2D Digital</h6>
+                        <div class="thirdCol__cell__time">
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                          <button disabled>
+                            <p>21:45 <span> ~ 23:16</span></p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-Lotte2" role="tabpanel" aria-labelledby="v-pills-Lotte2-tab">
+                      <!-- 2 inside Lotte  -->
+                      <div class="thirdCol__cell">
+                        Không có suất chiếu
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- end content  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="advertise">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <a
+            class="nav-item nav-link active"
+            id="nav-24-tab"
+            data-toggle="tab"
+            href="#nav-24"
+            role="tab"
+            aria-controls="nav-24"
+            aria-selected="true"
+            >Điện Ảnh 24h</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="nav-review-tab"
+            data-toggle="tab"
+            href="#nav-review"
+            role="tab"
+            aria-controls="nav-review"
+            aria-selected="false"
+            >Review</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="nav-promo-tab"
+            data-toggle="tab"
+            href="#nav-promo"
+            role="tab"
+            aria-controls="nav-promo"
+            aria-selected="false"
+            >Khuyến mãi</a
+          >
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-24"
+          role="tabpanel"
+          aria-labelledby="nav-24-tab"
+        >
+         <!-- page1 -->
+         <div class="row">
+           <div class="col-12 col-md-6">
+             <div class="advertise__item">
+               <img src="./imgs/gerard-butler-cung-bo-cu-deadpool-tham-gia-greenland-15937528932506.png" alt="">
+               <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat voluptatum ex suscipit quam vero necessitatibus quo doloribus quibusda</p>
+               <div class="advertise__item__button">
+                 <div class="advertise__item__button__like">
+                    <button><i class="fa fa-thumbs-up"></i></button>
+                    <span>1</span>
+                 </div>
+                 <div class="advertise__item__button__cmt">
+                  <button><i class="fa fa-comment-alt"></i></button>
+                  <span>0</span>
+               </div>
+               </div>
+             </div>
+           </div>
+           <!-- ...  -->
+           <div class="col-12 col-md-6">
+            <div class="advertise__item">
+              <img src="./imgs/dien-vien-dac-biet-cua-bang-chung-vo-hinh-15937518743844.png" alt="">
+              <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat voluptatum ex suscipit quam vero necessitatibus quo doloribus quibusda</p>
+               <div class="advertise__item__button">
+                 <div class="advertise__item__button__like">
+                    <button><i class="fa fa-thumbs-up"></i></button>
+                    <span>1</span>
+                 </div>
+                 <div class="advertise__item__button__cmt">
+                  <button><i class="fa fa-comment-alt"></i></button>
+                  <span>0</span>
+               </div>
+               </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-12 col-md-4">
+            <div class="advertise__item">
+              <img src="./imgs/pee-nak-2-van-kiep-thien-thu-di-tu-khong-het-nghiep-15937498617966.png" alt="">
+              <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat</p>
+              <div class="advertise__item__button">
+                <div class="advertise__item__button__like">
+                   <button><i class="fa fa-thumbs-up"></i></button>
+                   <span>1</span>
+                </div>
+                <div class="advertise__item__button__cmt">
+                 <button><i class="fa fa-comment-alt"></i></button>
+                 <span>0</span>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-12 col-md-4">
+           <div class="advertise__item">
+             <img src="./imgs/loat-phim-kinh-di-khong-the-bo-lo-trong-thang-7-15937471008042.png" alt="">
+             <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat </p>
+              <div class="advertise__item__button">
+                <div class="advertise__item__button__like">
+                   <button><i class="fa fa-thumbs-up"></i></button>
+                   <span>1</span>
+                </div>
+                <div class="advertise__item__button__cmt">
+                 <button><i class="fa fa-comment-alt"></i></button>
+                 <span>0</span>
+              </div>
+              </div>
+           </div>
+         </div>
+         <!-- ...  -->
+         <div class="col-12 col-md-4">
+           <div class="advertise__news">
+             <div class="advertise__news__item">
+             <img src="./imgs/rom-tung-trailer-he-lo-cuoc-song-cua-dan-choi-so-de-15929959532579.jpg" alt="">
+             <span>RÒM tung trailer hé lộ cuộc sống của dân chơi số đề</span>
+           </div>
+           <div class="advertise__news__item">
+            <img src="./imgs/antebellum-trailer-cuoi-cung-khong-he-lo-bat-cu-thong-tin-gi-them-15929866818923.jpg" alt="">
+            <span>RÒM tung trailer hé lộ cuộc sống của dân chơi số đề</span>
+          </div>
+          <div class="advertise__news__item">
+            <img src="./imgs/ban-dao-peninsula-la-bom-tan-xac-song-khong-the-bo-lo-15925399264666.png" alt="">
+            <span>Bán đảo Peninsula là bom tấn xác sống không thể bỏ lỡ!</span>
+          </div>
+          <div class="advertise__news__item">
+            <img src="./imgs/toi-se-lam-tat-ca-ngo-ngang-boi-phien-ban-ta-ac-cua-minh-song-ji-hyo-15925375269303.png" alt="">
+            <span>Bán đảo Peninsula là bom tấn xác sống không thể bỏ lỡ!</span>
+          </div>
+           </div>
+           
+         </div>
+         <div class="col-12 advertise__watch-more">
+           <button>XEM THÊM</button>
+         </div>
+         </div>
+          <!-- end page 1 -->
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-review"
+          role="tabpanel"
+          aria-labelledby="nav-review-tab"
+        >
+        <!-- page2 -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="advertise__item">
+              <img src="./imgs/loat-phim-kinh-di-khong-the-bo-lo-trong-thang-7-15937471008042.png" alt="">
+              <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat voluptatum ex suscipit quam vero necessitatibus quo doloribus quibusda</p>
+              <div class="advertise__item__button">
+                <div class="advertise__item__button__like">
+                   <button><i class="fa fa-thumbs-up"></i></button>
+                   <span>1</span>
+                </div>
+                <div class="advertise__item__button__cmt">
+                 <button><i class="fa fa-comment-alt"></i></button>
+                 <span>0</span>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-12 col-md-6">
+           <div class="advertise__item">
+             <img src="./imgs/pee-nak-2-van-kiep-thien-thu-di-tu-khong-het-nghiep-15937498617966.png" alt="">
+             <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat voluptatum ex suscipit quam vero necessitatibus quo doloribus quibusda</p>
+              <div class="advertise__item__button">
+                <div class="advertise__item__button__like">
+                   <button><i class="fa fa-thumbs-up"></i></button>
+                   <span>1</span>
+                </div>
+                <div class="advertise__item__button__cmt">
+                 <button><i class="fa fa-comment-alt"></i></button>
+                 <span>0</span>
+              </div>
+              </div>
+           </div>
+         </div>
+         <!-- ...  -->
+         <div class="col-12 col-md-4">
+           <div class="advertise__item">
+             <img src="./imgs/pee-nak-2-van-kiep-thien-thu-di-tu-khong-het-nghiep-15937498617966.png" alt="">
+             <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat</p>
+             <div class="advertise__item__button">
+               <div class="advertise__item__button__like">
+                  <button><i class="fa fa-thumbs-up"></i></button>
+                  <span>1</span>
+               </div>
+               <div class="advertise__item__button__cmt">
+                <button><i class="fa fa-comment-alt"></i></button>
+                <span>0</span>
+             </div>
+             </div>
+           </div>
+         </div>
+         <!-- ...  -->
+         <div class="col-12 col-md-4">
+          <div class="advertise__item">
+            <img src="./imgs/loat-phim-kinh-di-khong-the-bo-lo-trong-thang-7-15937471008042.png" alt="">
+            <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat </p>
+             <div class="advertise__item__button">
+               <div class="advertise__item__button__like">
+                  <button><i class="fa fa-thumbs-up"></i></button>
+                  <span>1</span>
+               </div>
+               <div class="advertise__item__button__cmt">
+                <button><i class="fa fa-comment-alt"></i></button>
+                <span>0</span>
+             </div>
+             </div>
+          </div>
+        </div>
+        <!-- ...  -->
+        <div class="col-12 col-md-4">
+          <div class="advertise__news">
+            <div class="advertise__news__item">
+            <img src="./imgs/rom-tung-trailer-he-lo-cuoc-song-cua-dan-choi-so-de-15929959532579.jpg" alt="">
+            <span>RÒM tung trailer hé lộ cuộc sống của dân chơi số đề</span>
+          </div>
+          <div class="advertise__news__item">
+           <img src="./imgs/antebellum-trailer-cuoi-cung-khong-he-lo-bat-cu-thong-tin-gi-them-15929866818923.jpg" alt="">
+           <span>RÒM tung trailer hé lộ cuộc sống của dân chơi số đề</span>
+         </div>
+         <div class="advertise__news__item">
+           <img src="./imgs/ban-dao-peninsula-la-bom-tan-xac-song-khong-the-bo-lo-15925399264666.png" alt="">
+           <span>Bán đảo Peninsula là bom tấn xác sống không thể bỏ lỡ!</span>
+         </div>
+         <div class="advertise__news__item">
+           <img src="./imgs/toi-se-lam-tat-ca-ngo-ngang-boi-phien-ban-ta-ac-cua-minh-song-ji-hyo-15925375269303.png" alt="">
+           <span>Bán đảo Peninsula là bom tấn xác sống không thể bỏ lỡ!</span>
+         </div>
+          </div>
+          
+        </div>
+        <div class="col-12 advertise__watch-more">
+          <button>XEM THÊM</button>
+        </div>
+        </div>
+
+        <!-- ----------  -->
+          </div>
+          <div
+          class="tab-pane fade"
+          id="nav-promo"
+          role="tabpanel"
+          aria-labelledby="nav-promo-tab"
+        >
+        <!-- page3 -->
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="advertise__item">
+              <img src="./imgs/dien-vien-dac-biet-cua-bang-chung-vo-hinh-15937518743844.png" alt="">
+              <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat voluptatum ex suscipit quam vero necessitatibus quo doloribus quibusda</p>
+              <div class="advertise__item__button">
+                <div class="advertise__item__button__like">
+                   <button><i class="fa fa-thumbs-up"></i></button>
+                   <span>1</span>
+                </div>
+                <div class="advertise__item__button__cmt">
+                 <button><i class="fa fa-comment-alt"></i></button>
+                 <span>0</span>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-12 col-md-6">
+           <div class="advertise__item">
+             <img src="./imgs/loat-phim-kinh-di-khong-the-bo-lo-trong-thang-7-15937471008042.png" alt="">
+             <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat voluptatum ex suscipit quam vero necessitatibus quo doloribus quibusda</p>
+              <div class="advertise__item__button">
+                <div class="advertise__item__button__like">
+                   <button><i class="fa fa-thumbs-up"></i></button>
+                   <span>1</span>
+                </div>
+                <div class="advertise__item__button__cmt">
+                 <button><i class="fa fa-comment-alt"></i></button>
+                 <span>0</span>
+              </div>
+              </div>
+           </div>
+         </div>
+         <!-- ...  -->
+         <div class="col-12 col-md-4">
+           <div class="advertise__item">
+             <img src="./imgs/pee-nak-2-van-kiep-thien-thu-di-tu-khong-het-nghiep-15937498617966.png" alt="">
+             <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat</p>
+             <div class="advertise__item__button">
+               <div class="advertise__item__button__like">
+                  <button><i class="fa fa-thumbs-up"></i></button>
+                  <span>1</span>
+               </div>
+               <div class="advertise__item__button__cmt">
+                <button><i class="fa fa-comment-alt"></i></button>
+                <span>0</span>
+             </div>
+             </div>
+           </div>
+         </div>
+         <!-- ...  -->
+         <div class="col-12 col-md-4">
+          <div class="advertise__item">
+            <img src="./imgs/loat-phim-kinh-di-khong-the-bo-lo-trong-thang-7-15937471008042.png" alt="">
+            <h5>Gerard Butler cùng bồ cũ Deadpool tham gia Greenland</h5>
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem modi hic nobis nemo, quia placeat </p>
+             <div class="advertise__item__button">
+               <div class="advertise__item__button__like">
+                  <button><i class="fa fa-thumbs-up"></i></button>
+                  <span>1</span>
+               </div>
+               <div class="advertise__item__button__cmt">
+                <button><i class="fa fa-comment-alt"></i></button>
+                <span>0</span>
+             </div>
+             </div>
+          </div>
+        </div>
+        <!-- ...  -->
+        <div class="col-12 col-md-4">
+          <div class="advertise__news">
+            <div class="advertise__news__item">
+            <img src="./imgs/rom-tung-trailer-he-lo-cuoc-song-cua-dan-choi-so-de-15929959532579.jpg" alt="">
+            <span>RÒM tung trailer hé lộ cuộc sống của dân chơi số đề</span>
+          </div>
+          <div class="advertise__news__item">
+           <img src="./imgs/antebellum-trailer-cuoi-cung-khong-he-lo-bat-cu-thong-tin-gi-them-15929866818923.jpg" alt="">
+           <span>RÒM tung trailer hé lộ cuộc sống của dân chơi số đề</span>
+         </div>
+         <div class="advertise__news__item">
+           <img src="./imgs/ban-dao-peninsula-la-bom-tan-xac-song-khong-the-bo-lo-15925399264666.png" alt="">
+           <span>Bán đảo Peninsula là bom tấn xác sống không thể bỏ lỡ!</span>
+         </div>
+         <div class="advertise__news__item">
+           <img src="./imgs/toi-se-lam-tat-ca-ngo-ngang-boi-phien-ban-ta-ac-cua-minh-song-ji-hyo-15925375269303.png" alt="">
+           <span>Bán đảo Peninsula là bom tấn xác sống không thể bỏ lỡ!</span>
+         </div>
+          </div>
+          
+        </div>
+        <div class="col-12 advertise__watch-more">
+          <button>XEM THÊM</button>
+        </div>
+        </div>
+
+        <!-- ----------  -->
+          </div>
+        </div>
+    </section>
+    <section class="app">
+      <div class="app__container">
+        <div class="app__container__info">
+        <h2>Ứng dụng tiện lợi dành cho người yêu điện ảnh</h2>
+        <p>Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và đổi quà hấp dẫn.</p>
+        <button>App miễn phí - Tải về ngay!</button>
+        <p>
+          TIX có 2 phiên bản 
+          <a href="#">iOS</a>
+          và
+          <a href="#">Android</a>
+        </p>
+      </div>
+      <div class="app__container__img">
+        <div class="app__container__img__content">
+          <img src="./imgs/mobile.png" alt="">
+        <div class="app__container__img__content__slider">
+          <div id="carouselExampleInterval--app" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="10000">
+                <img src="./imgs/slide2.jpg" alt="">
+              </div>
+              <div class="carousel-item" data-interval="2000">
+                <img src="./imgs/slide3.jpg" alt="">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval--app" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval--app" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+      </div>
+      
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="row footer__container__top">
+          <div class="col-4">
+            <div class="footer__container__item">
+              <h6>TIX</h6>
+              <div class="row footer__container__item__link">
+                <div class="col-6">
+                  <a href="#">FAQ</a>
+                </div>
+                <div class="col-6">
+                  <a href="#">Thỏa thuận sử dụng</a>
+                </div>
+                <div class="col-6">
+                  <a href="#">Brand Guidelines</a>
+                </div>
+                <div class="col-6">
+                  <a href="#">Chính sách bảo mật</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-4">
+            <div class="footer__container__item">
+              <h6>ĐỐI TÁC</h6>
+              <div class="footer__container__item__logo">
+                <div class="footer__container__item__logo__row">
+                 <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/Lotte_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/BHD_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/Galaxy_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/CineStar_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/Lotte_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                </div>
+                <div class="footer__container__item__logo__row">
+                  <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/BHD_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/Galaxy_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/CineStar_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/BHD_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                <div class="_1logo">
+                  <a href="#">
+                  <img src="./imgs/Galaxy_logo.png" alt="">
+                </a>
+                <div class="overlay"></div>
+                </div>
+                </div>
+                <div class="footer__container__item__logo__row">
+                  <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/Lotte_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/BHD_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/Galaxy_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/CineStar_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/Lotte_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 </div>
+                 <div class="footer__container__item__logo__row">
+                   <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/BHD_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/Galaxy_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/CineStar_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/BHD_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 <div class="_1logo">
+                   <a href="#">
+                   <img src="./imgs/Galaxy_logo.png" alt="">
+                 </a>
+                 <div class="overlay"></div>
+                 </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-2">
+            <div class="footer__container__item">
+              <h6>MOBILE APP</h6>
+              <div class="footer__container__item__img">
+                <img src="./imgs/apple-logo.png" alt="">
+                <img src="./imgs/android-logo.png" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- ...  -->
+          <div class="col-2">
+            <div class="footer__container__item">
+              <h6>SOCIAL</h6>
+              <div class="footer__container__item__img">
+                <img src="./imgs/facebook-logo.png" alt="">
+                <img src="./imgs/zalo-logo.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__container__responsive-top">
+          <div class="row">
+              <div class="col-12 col-md-4">
+                          <div class="footer__container__responsive-top__item">
+                              <div >
+                                <a href="#">FAQ</a>
+                              </div>
+                              <div>
+                                <a href="#">Thỏa thuận sử dụng</a>
+                              </div>
+                              <div>
+                                <a href="#">Brand Guidelines</a>
+                              </div>
+                              <div>
+                                <a href="#">Chính sách bảo mật</a>
+                              </div>
+                          </div>
+                        </div>
+                        <!-- ...  -->
+                        <div class="col-12 col-md-5">
+                          <div class="footer__container__responsive-top__item">
+                              <img src="./imgs/facebook-logo.png" alt="">
+                              <img src="./imgs/zalo-logo.png" alt="">
+                          </div>
+                        </div>
+          </div>
+          
+        </div>
+        <!-- footer__bottom -->
+        <div class="footer__container__bottom">
+          <div class="footer__container__bottom__img">
+            <img src="./imgs/zion-logo.jpg" alt="">
+          </div>
+          
+          <div class="footer__container__bottom__contact">
+            <h6>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</h6>
+            <div>
+              <p>Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam.</p>
+             <p> Giấy chứng nhận đăng ký kinh doanh số: 0101659783,</p>
+             <p> đăng ký thay đổi lần thứ 30, ngày 22 tháng 01 năm 2020 do Sở kế hoạch và đầu tư Thành phố Hồ Chí Minh cấp.</p>
+             <p> Số Điện Thoại (Hotline): 1900 545 436</p>
+             <p> Email: <a href="mailto:support@tix.vn">support@tix.vn</a></p>
+            </div>
+            
+          </div>
+          <a href="#">
+            <img src="./imgs/d1e6bd560daa9e20131ea8a0f62e87f8.png" alt="">
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../package/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,477 @@
+@import "./theme/theme";
+@import "./helpers/mixin";
+@import "./components/header";
+@import "./components/footer";
+
+.banner {
+  position: relative;
+  margin-top: 60px;
+  //padding: 6% 0;
+  // background: url(../imgs/sac-dep-doi-tra-false-beauty-c16-15814133327192.jpg) center no-repeat;
+  // background-size: cover;
+  // filter: blur(10px);
+  @include MediaQuery($sm) {
+    display: none;
+  }
+  &__bg {
+    background: url(../imgs/sac-dep-doi-tra-false-beauty-c16-15814133327192.jpg)
+      center no-repeat;
+    background-size: cover;
+    filter: blur(15px);
+    height: 500px;
+    box-shadow: 0 0 0 5px $dark inset;
+    //position: relative;
+    &__overlay {
+      background-image: linear-gradient(to bottom, transparent, $darkBlue);
+      height: 530px;
+      box-shadow: 0 0 0 5px $dark inset;
+    }
+  }
+  &__container {
+    position: absolute;
+    padding-top: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: none;
+    width: 850px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include MediaQuery($md) {
+      width: 90%;
+      //padding: 0 5%;
+    }
+
+    &__left {
+      display: flex;
+      align-items: center;
+      width: 60%;
+      @include MediaQuery($md) {
+        width: 100%;
+      }
+      &__img {
+        margin-right: 10px;
+        position: relative;
+        &:hover button {
+          opacity: 1;
+        }
+        button {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include Button(
+            $textWhite,
+            $h4,
+            $fwBold,
+            80px,
+            80px,
+            rgba($color: $dark, $alpha: 0.5),
+            2px solid $paper,
+            50%,
+            0
+          );
+          opacity: 0;
+          transition: all 0.2s;
+        }
+      }
+      &__text {
+        p {
+          @include Text($textWhite, $h6, $fwRegular);
+          margin: 0;
+        }
+        h3 {
+          @include Text($textWhite, $h3-5, $fwMedium);
+          span {
+            @include Text($textWhite, $h5, $fwMedium);
+            background-color: $secondary;
+            border-radius: 5px;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+    &__right {
+      text-align: center;
+      &__score {
+        position: relative;
+        background-color: rgba($color: $darkBlue, $alpha: 0.5);
+        height: 130px;
+        width: 130px;
+        border: 7px solid $lightGreen;
+        border-radius: 50%;
+        text-align: center;
+        //  @include Text($textWhite,$h1,$fwMedium);
+        // transform: translateY(50%);
+        h1 {
+          @include Text($textWhite, $h1, $fwMedium);
+          //line-height: 130px;
+          transform: translateY(50%);
+        }
+      }
+      &__star {
+        @include Text($textSecondary, $h4, $fwBold);
+        span {
+          font-weight: $fwMedium;
+        }
+      }
+      p {
+        @include Text($textWhite, $subtitle, $fwMedium);
+      }
+    }
+  }
+}
+.banner-responsive {
+  margin-top: 60px;
+  display: none;
+  @include MediaQuery($sm) {
+    display: block;
+  }
+  &__img {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: linear-gradient(to bottom, transparent, $darkBlue);
+      width: 100%;
+      height: 100%;
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include Button(
+        $textWhite,
+        $h4,
+        $fwBold,
+        80px,
+        80px,
+        rgba($color: $darkBlue, $alpha: 0.5),
+        2px solid $paper,
+        50%,
+        0
+      );
+    }
+  }
+  &__text {
+    background-color: $darkBlue;
+    padding-left: 20px;
+    p {
+      @include Text($textLightGrey, $h6, $fwRegular);
+      margin: 0;
+    }
+    h3 {
+      @include Text($textWhite, $h4, $fwMedium);
+    }
+  }
+}
+.info {
+  background-color: $darkBlue;
+  padding-top: 40px;
+  .nav-tabs {
+    margin: auto;
+    margin-bottom: 20px;
+    //margin-top: 140px;
+    border: none;
+
+    justify-content: center;
+    @include MediaQuery($sm) {
+      width: auto;
+    }
+    .nav-item {
+      background-color: transparent;
+      border: none;
+      //padding: 10px 30px;
+      @include Text($textWhite, $h5, $fwMedium);
+      transition: all 0.2s;
+      @include MediaQuery($xs) {
+        font-size: $h6;
+      }
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+      &.active {
+        color: $textSecondary;
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+  .tab-content {
+    width: 850px;
+    margin: auto;
+    padding-bottom: 100px;
+    @include MediaQuery($md) {
+      width: 90%;
+    }
+    .tab-pane {
+      //     width: 950px;
+      // margin: auto;
+      // @include MediaQuery($md) {
+      //   width: 90%;
+      // }
+      .info__credit {
+        display: flex;
+        ul {
+          padding: 0 30px 0 0;
+          list-style: none;
+          @include Text($textWhite, $subtitle, $fwMedium);
+          line-height: 40px;
+          &._2nd {
+            @include Text($textWhite, $subtitle, $fwRegular);
+          }
+        }
+      }
+      .info__content {
+        h6 {
+          @include Text($textWhite, $subtitle, $fwMedium);
+          margin-bottom: 20px;
+        }
+        p {
+          @include Text($textWhite, $subtitle, $fwRegular);
+        }
+      }
+      .info__news {
+        margin-top: 80px;
+        width: 300px;
+        @include MediaQuery($sm) {
+          width: 100%;
+        }
+        h6 {
+          @include Text($textWhite, $h6, $fwMedium);
+        }
+        &__img {
+          clip-path: inset(5% 0 10% 0 round 10px);
+          img {
+            width: 100%;
+          }
+        }
+        a {
+          @include Text($textWhite, $h6, $fwMedium);
+          transition: all 0.2s;
+          &:hover {
+            color: $textSecondary;
+            text-decoration: none;
+          }
+        }
+        &__button {
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          &__like {
+            margin-right: 30px;
+            &:hover button {
+              transform: scale(1.2, 1.2);
+            }
+          }
+          &__cmt {
+            &:hover button {
+              transform: scale(1.2, 1.2);
+            }
+          }
+          button {
+            @include Button(
+              $textWhite,
+              $h6,
+              $fwBold,
+              auto,
+              auto,
+              transparent,
+              none,
+              0px,
+              0
+            );
+            transition: all 0.2s;
+          }
+          span {
+            @include Text($textWhite, $body2, $fwMedium);
+            padding-left: 5px;
+          }
+        }
+      }
+      .info__rate {
+        width: 600px;
+        margin: auto;
+        @include MediaQuery($sm){
+          width: 100%;
+        }
+        &__1st {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background-color: $paper;
+          border-radius: 5px;
+          padding: 10px 20px;
+          margin-bottom: 20px;
+          &__left {
+            display: flex;
+            align-items: center;
+            i {
+              font-size: $h2;
+              color: $textLightGrey;
+            }
+            span {
+              @include Text($textLightGrey, $h6, $fwRegular);
+              padding-left: 5px;
+            }
+          }
+          &__right {
+            i {
+              color: $lightRed;
+              font-size: $h5;
+              @include MediaQuery($sm){
+                font-size: $subtitle
+              }
+              @include MediaQuery($xs){
+                display: none;
+              }
+            }
+          }
+        }
+        &__cmt {
+          background-color: $paper;
+          border-radius: 5px;
+          padding: 10px 20px;
+          margin-bottom: 20px;
+          &__top {
+            display: flex;
+            justify-content: space-between;
+            .ava {
+              display: flex;
+              align-items: center;
+
+              &__img {
+                position: relative;
+                img {
+                  &:first-child {
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50%;
+                  }
+                  &:last-child {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                  }
+                }
+              }
+              &__text {
+                padding-left: 10px;
+                p {
+                  @include Text($textPrimary, $h6, $fwMedium);
+                  margin: 0;
+                  &:last-child {
+                    @include Text($textLightGrey, $body1, $fwMedium);
+                  }
+                }
+              }
+            }
+            .score {
+              text-align: center;
+              padding: 0 5px;
+              background-color: transparent;
+              line-height: 20px;
+              p {
+                @include Text($textGreen, $h5, $fwMedium);
+                margin: 0;
+              }
+              &__star {
+                margin: 0;
+                letter-spacing: -2px;
+                i
+               {
+                  @include Text($textSecondary, 8px, $fwBold);
+                }
+                span{
+                  letter-spacing: 0;
+                  @include Text($textSecondary, 8px, $fwRegular);
+                }
+              }
+            }
+          }
+          &__middle {
+            border-bottom: 1px solid $lightGrey;
+            padding-bottom: 20px;
+            p {
+              @include Text($textPrimary, $h6, $fwRegular);
+              padding-top: 20px;
+              margin: 0;
+            }
+            button {
+              @include Button(
+                $textSecondary,
+                $h6,
+                $fwRegular,
+                auto,
+                auto,
+                transparent,
+                none,
+                0,
+                0
+              );
+            }
+          }
+          &__bottom {
+            padding-top: 10px;
+            div {
+              cursor: pointer;
+              width: 100px;
+              &:hover button {
+                transform: scale(1.1, 1.1);
+              }
+              button {
+                transition: all 0.2s;
+                @include Button(
+                  $textLightGrey,
+                  $h6,
+                  $fwBold,
+                  auto,
+                  auto,
+                  transparent,
+                  none,
+                  0,
+                  0
+                );
+              }
+              span {
+                @include Text($textLightGrey, $h6, $fwMedium);
+                &:last-child {
+                  font-weight: $fwRegular;
+                }
+              }
+            }
+          }
+        }
+        .info__watch-more {
+          text-align: center;
+          margin-top: 30px;
+          button {
+            @include Button(
+              $textLightGrey,
+              $h6,
+              $fwMedium,
+              auto,
+              auto,
+              transparent,
+              1px solid $textLightGrey,
+              5px,
+              5px 20px
+            );
+            transition: all 0.2s;
+            &:hover {
+              border-color: $secondary;
+              color: $textWhite;
+              background-color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
